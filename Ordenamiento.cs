@@ -37,5 +37,24 @@ namespace OrednamientoBusquedaG2_2024_1
                 }
             }
         }
+        internal static void Baraja(int[] A)
+        {
+            int N = A.Length;
+            for (int i = 1; i < N; i++)
+            {
+                int min = A[i];
+                int j = i - 1;
+                while (j >= 0 && A[j] > min)
+                {
+                    A[j + 1] = A[j];
+                    j = j - 1;
+                }
+                A[j + 1] = min;
+            }
+        }
+        internal static void Quicksort(int[] A)
+        {
+
+        }
     }
 }
